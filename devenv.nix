@@ -25,10 +25,14 @@
     enable = true;
     stack.enable = true;
   };
+  # https://github.com/cachix/devenv/blob/5297dd928c090440d90b9277d5113847b1edef19/docs/src/languages/python.md?plain=1#L123-L130
   languages.python = {
     enable = true;
-    uv.enable = true;
-    uv.sync.enable = true;
+    venv.enable = true;
+    uv = {
+      enable = true;
+      sync.enable = true;
+    };
   };
 
   # https://devenv.sh/processes/
@@ -61,7 +65,6 @@
     hello
     git --version
     # https://github.com/astral-sh/uv/blob/e006a69fe83808d5eaebaa27f535914cf1b36105/docs/guides/projects.md?plain=1#L231
-    source .venv/bin/activate
   '';
 
   # https://devenv.sh/tasks/
