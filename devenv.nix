@@ -15,6 +15,7 @@
     pkgs.ghcid
     pkgs.git
     pkgs.gitleaks
+    pkgs.pre-commit
     pkgs.wget
   ];
 
